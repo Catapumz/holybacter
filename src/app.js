@@ -7,6 +7,7 @@ const data_create = require("./routes/data_create");
 const data_edit = require("./routes/data_edit");
 const data_delete = require("./routes/data_delete");
 const stable = require("./routes/teststable");
+const stable2 = require("./routes/stable2");
 
 //Crear servidor Node
 const app = express();
@@ -22,5 +23,6 @@ app.use("/", data_create);
 app.use("/", data_edit);
 app.use("/", data_delete);
 app.use("/", stable);
+app.use("/", stable2);
 
 module.exports = { app };
