@@ -20,48 +20,48 @@ const consulta = async (req, res) => {
     voltagePrompt =
       "dysfunctional, non-existent, hostile environment, anaerobic bacteria";
   }
-  if (0.1 <= voltage && voltage <= 0.199) {
+  if (0.099 < voltage && voltage <= 0.199) {
     voltagePrompt =
       "low activity, pure water, few anaerobic bacteria, synthetic biology";
   }
-  if (0.2 <= voltage && voltage <= 0.299) {
+  if (0.199 < voltage && voltage <= 0.299) {
     voltagePrompt =
       "continuous anaerobic bacterial flow, growing life, in process";
   }
-  if (0.3 <= voltage && voltage <= 0.399) {
+  if (0.299 < voltage && voltage <= 0.399) {
     voltagePrompt =
       "high activity, blooming, active anaerobic bacterial metabolism";
   }
-  if (0.4 <= voltage && voltage <= 0.5) {
+  if (0.399 < voltage && voltage <= 0.5) {
     voltagePrompt =
       "maximum yield, anaerobic bacterial hypercolonisation, foul water";
   }
 
-  console.log(tds);
-
-  if (0 <= tds && tds <= 0.099) {
-    tdsPrompt = "10dpi";
-  }
-  if (0.1 <= tds && tds <= 0.199) {
-    tdsPrompt = "20dpi";
-  }
-  if (0.2 <= tds && tds <= 0.299) {
-    tdsPrompt = "40dpi";
-  }
-  if (0.3 <= tds && tds <= 0.399) {
-    tdsPrompt = "50dpi";
-  }
-  if (0.4 <= tds && tds <= 0.5) {
-    tdsPrompt = "72dpi";
-  }
   if (5.5 <= ph && ph <= 6.0) {
     phPrompt = "color: black and white contrast:high";
   }
   if (6.0 < ph && ph <= 6.2) {
     phPrompt = "color: greyscale contrast: medium";
   }
+
   if (6.2 < ph && ph <= 6.7) {
     phPrompt = "color: greyscale contrast:low";
+  }
+
+  if (0 <= tds && tds <= 0.099) {
+    tdsPrompt = "resolution: 10dpi";
+  }
+  if (0.099 < tds && tds <= 0.199) {
+    tdsPrompt = "resolution: 20dpi";
+  }
+  if (0.199 < tds && tds <= 0.299) {
+    tdsPrompt = "resolution: 40dpi";
+  }
+  if (0.299 < tds && tds <= 0.399) {
+    tdsPrompt = "resolution: 50dpi";
+  }
+  if (0.399 < tds && tds <= 0.5) {
+    tdsPrompt = "resolution: 72dpi";
   }
 
   _searchText = `${searchController} ${voltagePrompt} ${phPrompt} ${tdsPrompt}`;
