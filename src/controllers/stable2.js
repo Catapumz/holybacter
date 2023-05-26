@@ -37,35 +37,36 @@ const consulta = async (req, res) => {
       "maximum yield, anaerobic bacterial hypercolonisation, foul water";
   }
 
-  if (5.5 <= ph && ph <= 6.0) {
+  if (5.5 <= ph && ph <= 6.16) {
     phPrompt = "color: black and white contrast:high";
   }
-  if (6.0 < ph && ph <= 6.2) {
+  if (6.16 < ph && ph <= 6.82) {
     phPrompt = "color: greyscale contrast: medium";
   }
 
-  if (6.2 < ph && ph <= 6.7) {
+  if (6.82 < ph && ph <= 7.5) {
     phPrompt = "color: greyscale contrast:low";
   }
 
-  if (0 <= tds && tds <= 0.099) {
-    tdsPrompt = "resolution: 10dpi";
+  if (600 <= tds && tds <= 633) {
+    tdsPrompt = "resolution: 5dpi";
   }
-  if (0.099 < tds && tds <= 0.199) {
+  if (633 < tds && tds <= 666) {
+    tdsPrompt = "resolution: 15dpi";
+  }
+  if (700 < tds && tds <= 733) {
     tdsPrompt = "resolution: 20dpi";
   }
-  if (0.199 < tds && tds <= 0.299) {
-    tdsPrompt = "resolution: 40dpi";
+  if (733 < tds && tds <= 766) {
+    tdsPrompt = "resolution: 25dpi";
   }
-  if (0.299 < tds && tds <= 0.399) {
-    tdsPrompt = "resolution: 50dpi";
-  }
-  if (0.399 < tds && tds <= 0.5) {
-    tdsPrompt = "resolution: 72dpi";
+  if (766 < tds && tds <= 800) {
+    tdsPrompt = "resolution: 30dpi";
   }
 
   _searchText = `${searchController} ${voltagePrompt} ${phPrompt} ${tdsPrompt}`;
   console.log(_searchText);
+
   const prompt = _searchText;
   const headers = {
     "Content-Type": "application/json",
