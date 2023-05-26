@@ -13,7 +13,7 @@ const consulta = async (req, res) => {
   const stack = await Stack.find({});
   console.log(stack[0]);
   let voltage = stack[0].volValue;
-  let tds = stack[0].tds_value;
+  let tds = stack[0].tds_Value;
   let ph = stack[0].ph_act;
 
   if (0 <= voltage && voltage <= 0.099) {
