@@ -11,10 +11,13 @@ const consulta = async (req, res) => {
   let searchController = req.body.prompt;
 
   const stack = await Stack.find({});
-  console.log(stack[0]);
+  //console.log(stack[0]);
   let voltage = stack[0].volValue;
+  console.log(stack[0].volValue);
   let tds = stack[0].tds_Value;
+  console.log(stack[0].tds_Value);
   let ph = stack[0].ph_act;
+  console.log(stack[0].PH_ACT);
 
   if (0 <= voltage && voltage <= 0.099) {
     voltagePrompt =
