@@ -99,6 +99,10 @@ const consulta = async (req, res) => {
       return res.status(200).json({
         prompt: prompt,
         data: response.data,
+
+        data2: voltagePrompt,
+        data3: phPrompt,
+        data4: tdsPrompt,
       });
     })
     .catch((error) => {
