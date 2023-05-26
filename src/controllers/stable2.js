@@ -57,13 +57,13 @@ const consulta = async (req, res) => {
   if (633 < tds && tds <= 666) {
     tdsPrompt = "resolution: 15dpi";
   }
-  if (700 < tds && tds <= 733) {
+  if (666 < tds && tds <= 700) {
     tdsPrompt = "resolution: 20dpi";
   }
-  if (733 < tds && tds <= 766) {
+  if (700 < tds && tds <= 733) {
     tdsPrompt = "resolution: 25dpi";
   }
-  if (766 < tds && tds <= 800) {
+  if (733 < tds && tds <= 800) {
     tdsPrompt = "resolution: 30dpi";
   }
 
