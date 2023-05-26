@@ -13,9 +13,9 @@ const consulta = async (req, res) => {
   const stack = await Stack.find({});
 
   let voltage = stack[0].volValue;
-  let tds = stack[0].tds_Value;
+  let tds = stack[0].tds_value;
 
-  console.log(stack[0].tds_Value);
+  console.log(stack[0].tds_value);
   console.log(tds);
   let ph = stack[0].ph_act;
 
