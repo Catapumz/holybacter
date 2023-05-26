@@ -17,7 +17,7 @@ const consulta = async (req, res) => {
   let tds = stack[0].tds_Value;
   console.log(stack[0].tds_Value);
   let ph = stack[0].ph_act;
-  console.log(stack[0].PH_ACT);
+  console.log(stack[0].ph_act);
 
   if (0 <= voltage && voltage <= 0.099) {
     voltagePrompt =
