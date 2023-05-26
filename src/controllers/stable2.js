@@ -65,10 +65,6 @@ const consulta = async (req, res) => {
   }
 
   _searchText = `${searchController} ${voltagePrompt} ${phPrompt} ${tdsPrompt}`;
-  console.log(_searchText);
-  console.log(voltagePrompt);
-  console.log(phPrompt);
-  console.log(tdsPrompt);
 
   const prompt = _searchText;
   const headers = {
@@ -94,8 +90,6 @@ const consulta = async (req, res) => {
   axios
     .post(url, body, { headers })
     .then((response) => {
-      console.log(response.data);
-
       return res.status(200).json({
         prompt: prompt,
         data: response.data,
