@@ -66,6 +66,9 @@ const consulta = async (req, res) => {
 
   _searchText = `${searchController} ${voltagePrompt} ${phPrompt} ${tdsPrompt}`;
   console.log(_searchText);
+  console.log(voltagePrompt);
+  console.log(phPrompt);
+  console.log(tdsPrompt);
 
   const prompt = _searchText;
   const headers = {
